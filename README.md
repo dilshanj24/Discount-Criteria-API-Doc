@@ -36,8 +36,8 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-  "discountName": "Sale 2023",
-  "discountCode": "740003931",
+  "discountName": "asdga",
+  "discountCode": "afadsf",
   "discountCategory": 1,
   "discountEntity": 2,
   "attributes": {
@@ -70,9 +70,9 @@ The following fields use numeric values to represent specific options:
       "discountAmount": 5.00
     }
   ],
-  "benefitedDiscount": 10.00,
-  "notifications": true,
-  "appliedPayIds": false,
+  "isNotificationEnabled": false,
+  "isAppliedToPayIds": false,
+  "benefitedDiscount": 20.0,
   "createdBy": "admin"
 }
 ```
@@ -81,9 +81,9 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 1,
-    "discountName": "Sale 2023",
-    "discountCode": "740003931",
+    "id": 4,
+    "discountName": "asdga",
+    "discountCode": "afadsf",
     "discountCategory": 1,
     "discountEntity": 2,
     "attributes": {
@@ -116,12 +116,12 @@ The following fields use numeric values to represent specific options:
             "discountAmount": 5.0
         }
     ],
-    "benefitedDiscount": 10.00,
+    "benefitedDiscount": 20.0,
     "isActive": true,
-    "notifications": true,
-    "appliedPayIds": false,
-    "createdAt": "2025-06-27 13:35:08",
-    "updatedAt": "2025-06-27 13:35:08",
+    "isNotificationEnabled": false,
+    "isAppliedToPayIds": false,
+    "createdAt": "2025-07-02 10:22:39",
+    "updatedAt": "2025-07-02 10:22:39",
     "createdBy": "admin"
 }
 ```
@@ -139,9 +139,9 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 1,
-    "discountName": "Sale 2023",
-    "discountCode": "740003931",
+    "id": 4,
+    "discountName": "asdga",
+    "discountCode": "afadsf",
     "discountCategory": 1,
     "discountEntity": 2,
     "attributes": {
@@ -174,12 +174,12 @@ The following fields use numeric values to represent specific options:
             "discountAmount": 5.0
         }
     ],
-    "benefitedDiscount": 10.00,
+    "benefitedDiscount": 20.00,
     "isActive": true,
-    "notifications": true,
-    "appliedPayIds": false,
-    "createdAt": "2025-06-27 13:35:08",
-    "updatedAt": "2025-06-27 13:35:08",
+    "isNotificationEnabled": false,
+    "isAppliedToPayIds": false,
+    "createdAt": "2025-07-02 10:22:39",
+    "updatedAt": "2025-07-02 10:22:39",
     "createdBy": "admin"
 }
 ```
@@ -200,9 +200,9 @@ The following fields use numeric values to represent specific options:
 {
     "content": [
         {
-            "id": 1,
-            "discountName": "Sale 2023",
-            "discountCode": "740003931",
+            "id": 4,
+            "discountName": "asdga",
+            "discountCode": "afadsf",
             "discountCategory": 1,
             "discountEntity": 2,
             "attributes": {
@@ -235,18 +235,18 @@ The following fields use numeric values to represent specific options:
                     "discountAmount": 5.0
                 }
             ],
-            "benefitedDiscount": 10.00,
+            "benefitedDiscount": 20.00,
             "isActive": true,
-            "notifications": true,
-            "appliedPayIds": false,
-            "createdAt": "2025-06-27 13:35:08",
-            "updatedAt": "2025-06-27 13:35:08",
+            "isNotificationEnabled": false,
+            "isAppliedToPayIds": false,
+            "createdAt": "2025-07-02 10:22:39",
+            "updatedAt": "2025-07-02 10:22:39",
             "createdBy": "admin"
         },
         {
-            "id": 2,
-            "discountName": "December 2025",
-            "discountCode": "740003934",
+            "id": 5,
+            "discountName": "asdga",
+            "discountCode": "afadsf",
             "discountCategory": 1,
             "discountEntity": 2,
             "attributes": {
@@ -279,17 +279,17 @@ The following fields use numeric values to represent specific options:
                     "discountAmount": 5.0
                 }
             ],
-            "benefitedDiscount": 10.00,
+            "benefitedDiscount": 20.00,
             "isActive": true,
-            "notifications": true,
-            "appliedPayIds": false,
-            "createdAt": "2025-06-27 13:38:34",
-            "updatedAt": "2025-06-27 13:38:34",
+            "isNotificationEnabled": false,
+            "isAppliedToPayIds": false,
+            "createdAt": "2025-07-02 10:28:01",
+            "updatedAt": "2025-07-02 10:28:01",
             "createdBy": "admin"
         }
     ],
     "page": 0,
-    "size": 3,
+    "size": 50,
     "totalElements": 2,
     "totalPages": 1,
     "first": true,
@@ -310,9 +310,9 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 2,
-    "discountName": "December 2025",
-    "discountCode": "740003934",
+    "id": 4,
+    "discountName": "asdga",
+    "discountCode": "afadsf",
     "discountCategory": 1,
     "discountEntity": 2,
     "attributes": {
@@ -345,12 +345,12 @@ The following fields use numeric values to represent specific options:
             "discountAmount": 5.0
         }
     ],
-    "benefitedDiscount": 10.00,
+    "benefitedDiscount": 20.00,
     "isActive": false,
-    "notifications": true,
-    "appliedPayIds": false,
-    "createdAt": "2025-06-27 13:38:34",
-    "updatedAt": "2025-06-27 13:38:34",
+    "isNotificationEnabled": false,
+    "isAppliedToPayIds": false,
+    "createdAt": "2025-07-02 10:22:39",
+    "updatedAt": "2025-07-02 10:22:39",
     "createdBy": "admin"
 }
 ```
