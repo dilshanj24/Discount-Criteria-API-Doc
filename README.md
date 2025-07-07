@@ -235,14 +235,15 @@ The following fields use numeric values to represent specific options:
 }
 ```
 
-### ✅ Success and ❌ Error Codes with Messages
+### Error Response
 
-| Code | Type    | Message               | Description                                        |
-| ---- | ------- | --------------------- | -------------------------------------------------- |
-| 200  | Success | OK                    | The request was successful.                        |
-| 201  | Success | Created               | The resource was successfully created.             |
-| 400  | Error   | Bad Request           | The request is invalid or missing required fields. |
-| 401  | Error   | Unauthorized          | Authentication is required or has failed.          |
-| 404  | Error   | Not Found             | The requested resource could not be found.         |
-| 500  | Error   | Internal Server Error | An unexpected error occurred on the server.        |
-
+```json
+{
+    "Error": [
+        {
+            "code": "RESOURCE_NOT_FOUND",
+            "message": "Discount criteria not found with id: 50"
+        }
+    ]
+}
+```
