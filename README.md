@@ -36,44 +36,24 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-  "discountName": "asdga",
-  "discountCode": "afadsf",
-  "discountCategory": 1,
-  "discountEntity": 2,
-  "attributes": {
-    "season": "summer",
-    "targetCustomers": "all"
-  },
-  "valueType": 1,
-  "value": 15.00,
-  "minimumEligibilityAmount": 100.00,
-  "maximumEligibilityAmount": 1000.00,
-  "validFrom": "2023-06-01 00:00:00",
-  "validTo": "2023-08-31 23:59:59",
-  "purchasingCriteria": [
-    {
-      "productId": 101,
-      "minQuantity": 1
-    },
-    {
-      "productId": 202,
-      "minQuantity": 2
-    }
-  ],
-  "benefitedProductList": [
-    {
-      "productId": 303,
-      "discountPercentage": 10
-    },
-    {
-      "productId": 404,
-      "discountAmount": 5.00
-    }
-  ],
-  "isNotificationEnabled": false,
-  "isAppliedToPayIds": false,
-  "benefitedDiscount": 20.0,
-  "createdBy": "admin"
+  "discount_name": "asdga",
+  "discount_code": "asdga",
+  "discount_category": "asdga",
+  "discount_entity": "asdga",
+  "entity_attributes": {},
+  "value_type": 1,
+  "value": 20.3,
+  "minimum_eligibility_amount": 32.2,
+  "maximum_eligibility_amount": 123.2,
+  "valid_from": "2023-06-01 00:00:00",
+  "valid_to": "2023-08-31 23:59:59",
+  "purchasing_criteria": {},
+  "benefited_product_list": {},
+  "flags": {},
+  "is_notification_enabled": true,
+  "is_applied_to_pay_ids": true,
+  "customer_pay_ref": {},
+  "created_by": "string"
 }
 ```
 
@@ -81,48 +61,28 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 4,
-    "discountName": "asdga",
-    "discountCode": "afadsf",
-    "discountCategory": 1,
-    "discountEntity": 2,
-    "attributes": {
-        "season": "summer",
-        "targetCustomers": "all"
-    },
-    "valueType": 1,
-    "value": 15.00,
-    "minimumEligibilityAmount": 100.00,
-    "maximumEligibilityAmount": 1000.00,
-    "validFrom": "2023-06-01 00:00:00",
-    "validTo": "2023-08-31 23:59:59",
-    "purchasingCriteria": [
-        {
-            "productId": 101,
-            "minQuantity": 1
-        },
-        {
-            "productId": 202,
-            "minQuantity": 2
-        }
-    ],
-    "benefitedProductList": [
-        {
-            "productId": 303,
-            "discountPercentage": 10
-        },
-        {
-            "productId": 404,
-            "discountAmount": 5.0
-        }
-    ],
-    "benefitedDiscount": 20.0,
-    "isActive": true,
-    "isNotificationEnabled": false,
-    "isAppliedToPayIds": false,
-    "createdAt": "2025-07-02 10:22:39",
-    "updatedAt": "2025-07-02 10:22:39",
-    "createdBy": "admin"
+    "id": 1,
+    "discount_name": "asdga",
+    "discount_code": "asdga",
+    "discount_category": "asdga",
+    "discount_entity": "asdga",
+    "entity_attributes": {},
+    "value_type": 1,
+    "value": 20.30,
+    "minimum_eligibility_amount": 32.20,
+    "maximum_eligibility_amount": 123.20,
+    "valid_from": "2023-06-01 00:00:00",
+    "valid_to": "2023-08-31 23:59:59",
+    "purchasing_criteria": {},
+    "benefited_product_list": {},
+    "flags": {},
+    "is_active": true,
+    "is_notification_enabled": true,
+    "is_applied_to_pay_ids": true,
+    "customer_pay_ref": {},
+    "created_at": "2025-07-07 09:28:06",
+    "updated_at": "2025-07-07 09:28:06",
+    "created_by": "string"
 }
 ```
 
@@ -139,48 +99,28 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 4,
-    "discountName": "asdga",
-    "discountCode": "afadsf",
-    "discountCategory": 1,
-    "discountEntity": 2,
-    "attributes": {
-        "season": "summer",
-        "targetCustomers": "all"
-    },
-    "valueType": 1,
-    "value": 15.00,
-    "minimumEligibilityAmount": 100.00,
-    "maximumEligibilityAmount": 1000.00,
-    "validFrom": "2023-06-01 00:00:00",
-    "validTo": "2023-08-31 23:59:59",
-    "purchasingCriteria": [
-        {
-            "productId": 101,
-            "minQuantity": 1
-        },
-        {
-            "productId": 202,
-            "minQuantity": 2
-        }
-    ],
-    "benefitedProductList": [
-        {
-            "productId": 303,
-            "discountPercentage": 10
-        },
-        {
-            "productId": 404,
-            "discountAmount": 5.0
-        }
-    ],
-    "benefitedDiscount": 20.00,
-    "isActive": true,
-    "isNotificationEnabled": false,
-    "isAppliedToPayIds": false,
-    "createdAt": "2025-07-02 10:22:39",
-    "updatedAt": "2025-07-02 10:22:39",
-    "createdBy": "admin"
+    "id": 1,
+    "discount_name": "asdga",
+    "discount_code": "asdga",
+    "discount_category": "asdga",
+    "discount_entity": "asdga",
+    "entity_attributes": {},
+    "value_type": 1,
+    "value": 20.30,
+    "minimum_eligibility_amount": 32.20,
+    "maximum_eligibility_amount": 123.20,
+    "valid_from": "2023-06-01 00:00:00",
+    "valid_to": "2023-08-31 23:59:59",
+    "purchasing_criteria": {},
+    "benefited_product_list": {},
+    "flags": {},
+    "is_active": true,
+    "is_notification_enabled": true,
+    "is_applied_to_pay_ids": true,
+    "customer_pay_ref": {},
+    "created_at": "2025-07-07 09:28:06",
+    "updated_at": "2025-07-07 09:28:06",
+    "created_by": "string"
 }
 ```
 
@@ -200,92 +140,52 @@ The following fields use numeric values to represent specific options:
 {
     "content": [
         {
-            "id": 4,
-            "discountName": "asdga",
-            "discountCode": "afadsf",
-            "discountCategory": 1,
-            "discountEntity": 2,
-            "attributes": {
-                "season": "summer",
-                "targetCustomers": "all"
-            },
-            "valueType": 1,
-            "value": 15.00,
-            "minimumEligibilityAmount": 100.00,
-            "maximumEligibilityAmount": 1000.00,
-            "validFrom": "2023-06-01 00:00:00",
-            "validTo": "2023-08-31 23:59:59",
-            "purchasingCriteria": [
-                {
-                    "productId": 101,
-                    "minQuantity": 1
-                },
-                {
-                    "productId": 202,
-                    "minQuantity": 2
-                }
-            ],
-            "benefitedProductList": [
-                {
-                    "productId": 303,
-                    "discountPercentage": 10
-                },
-                {
-                    "productId": 404,
-                    "discountAmount": 5.0
-                }
-            ],
-            "benefitedDiscount": 20.00,
-            "isActive": true,
-            "isNotificationEnabled": false,
-            "isAppliedToPayIds": false,
-            "createdAt": "2025-07-02 10:22:39",
-            "updatedAt": "2025-07-02 10:22:39",
-            "createdBy": "admin"
+            "id": 1,
+            "discount_name": "asdga",
+            "discount_code": "asdga",
+            "discount_category": "asdga",
+            "discount_entity": "asdga",
+            "entity_attributes": {},
+            "value_type": 1,
+            "value": 20.30,
+            "minimum_eligibility_amount": 32.20,
+            "maximum_eligibility_amount": 123.20,
+            "valid_from": "2023-06-01 00:00:00",
+            "valid_to": "2023-08-31 23:59:59",
+            "purchasing_criteria": {},
+            "benefited_product_list": {},
+            "flags": {},
+            "is_active": true,
+            "is_notification_enabled": true,
+            "is_applied_to_pay_ids": true,
+            "customer_pay_ref": {},
+            "created_at": "2025-07-07 09:28:06",
+            "updated_at": "2025-07-07 09:28:06",
+            "created_by": "string"
         },
         {
-            "id": 5,
-            "discountName": "asdga",
-            "discountCode": "afadsf",
-            "discountCategory": 1,
-            "discountEntity": 2,
-            "attributes": {
-                "season": "summer",
-                "targetCustomers": "all"
-            },
-            "valueType": 1,
-            "value": 15.00,
-            "minimumEligibilityAmount": 100.00,
-            "maximumEligibilityAmount": 1000.00,
-            "validFrom": "2023-06-01 00:00:00",
-            "validTo": "2023-08-31 23:59:59",
-            "purchasingCriteria": [
-                {
-                    "productId": 101,
-                    "minQuantity": 1
-                },
-                {
-                    "productId": 202,
-                    "minQuantity": 2
-                }
-            ],
-            "benefitedProductList": [
-                {
-                    "productId": 303,
-                    "discountPercentage": 10
-                },
-                {
-                    "productId": 404,
-                    "discountAmount": 5.0
-                }
-            ],
-            "benefitedDiscount": 20.00,
-            "isActive": true,
-            "isNotificationEnabled": false,
-            "isAppliedToPayIds": false,
-            "createdAt": "2025-07-02 10:28:01",
-            "updatedAt": "2025-07-02 10:28:01",
-            "createdBy": "admin"
+            "id": 2,
+            "discount_name": "asdga",
+            "discount_code": "asdga",
+            "discount_category": "asdga",
+            "discount_entity": "asdga",
+            "entity_attributes": {},
+            "value_type": 1,
+            "value": 20.30,
+            "minimum_eligibility_amount": 32.20,
+            "maximum_eligibility_amount": 123.20,
+            "valid_from": "2023-06-01 00:00:00",
+            "valid_to": "2023-08-31 23:59:59",
+            "purchasing_criteria": {},
+            "benefited_product_list": {},
+            "flags": {},
+            "is_active": true,
+            "is_notification_enabled": true,
+            "is_applied_to_pay_ids": true,
+            "customer_pay_ref": {},
+            "created_at": "2025-07-07 09:28:10",
+            "updated_at": "2025-07-07 09:28:10",
+            "created_by": "string"
         }
     ],
     "page": 0,
@@ -311,46 +211,26 @@ The following fields use numeric values to represent specific options:
 ```json
 {
     "id": 4,
-    "discountName": "asdga",
-    "discountCode": "afadsf",
-    "discountCategory": 1,
-    "discountEntity": 2,
-    "attributes": {
-        "season": "summer",
-        "targetCustomers": "all"
-    },
-    "valueType": 1,
-    "value": 15.00,
-    "minimumEligibilityAmount": 100.00,
-    "maximumEligibilityAmount": 1000.00,
-    "validFrom": "2023-06-01 00:00:00",
-    "validTo": "2023-08-31 23:59:59",
-    "purchasingCriteria": [
-        {
-            "productId": 101,
-            "minQuantity": 1
-        },
-        {
-            "productId": 202,
-            "minQuantity": 2
-        }
-    ],
-    "benefitedProductList": [
-        {
-            "productId": 303,
-            "discountPercentage": 10
-        },
-        {
-            "productId": 404,
-            "discountAmount": 5.0
-        }
-    ],
-    "benefitedDiscount": 20.00,
-    "isActive": false,
-    "isNotificationEnabled": false,
-    "isAppliedToPayIds": false,
-    "createdAt": "2025-07-02 10:22:39",
-    "updatedAt": "2025-07-02 10:22:39",
-    "createdBy": "admin"
+    "discount_name": "asdga",
+    "discount_code": "asdga",
+    "discount_category": "asdga",
+    "discount_entity": "asdga",
+    "entity_attributes": {},
+    "value_type": 1,
+    "value": 20.30,
+    "minimum_eligibility_amount": 32.20,
+    "maximum_eligibility_amount": 123.20,
+    "valid_from": "2023-06-01 00:00:00",
+    "valid_to": "2023-08-31 23:59:59",
+    "purchasing_criteria": {},
+    "benefited_product_list": {},
+    "flags": {},
+    "is_active": false,
+    "is_notification_enabled": true,
+    "is_applied_to_pay_ids": true,
+    "customer_pay_ref": {},
+    "created_at": "2025-07-07 09:28:13",
+    "updated_at": "2025-07-07 09:28:13",
+    "created_by": "string"
 }
 ```
