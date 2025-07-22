@@ -14,14 +14,13 @@ This document provides details about the Discount Criteria CRUD endpoints.
 The following fields use numeric values to represent specific options:
 
 #### discountCategory
-- 1 = Product-based
-- 2 = Invoice-based
-- 3 = Miscellaneous
+- PRODUCT_BASED
+- INVOICE_BASED
 
 #### discountEntity
-- 1 = Advertisement
-- 2 = Membership
-- 3 = Other
+- ADVERTISEMENT
+- MEMBERSHIP
+- OTHER
 
 #### valueType
 - 1 = Percentage
@@ -36,24 +35,29 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-  "discount_name": "asdga",
-  "discount_code": "asdga",
-  "discount_category": "asdga",
-  "discount_entity": "asdga",
+  "discount_name": "10% off on topad & bumpup combo",
+  "discount_code": "TOPAD10COMBO",
+  "discount_category": "PRODUCT_BASED",
+  "discount_entity": "ADVERTISEMENT",
   "entity_attributes": {},
   "value_type": 1,
-  "value": 20.3,
-  "minimum_eligibility_amount": 32.2,
-  "maximum_eligibility_amount": 123.2,
-  "valid_from": "2023-06-01 00:00:00",
-  "valid_to": "2023-08-31 23:59:59",
-  "purchasing_criteria": {},
+  "value": 0.00,
+  "minimum_eligibility_amount": 0.00,
+  "maximum_eligibility_amount": 0.00,
+  "valid_from": "2025-07-27 00:00:00",
+  "valid_to": "2025-08-31 23:59:59",
+  "purchasing_criteria": {
+     "top_ad": [3],
+     "bump_up": [3, 7, 15]
+  },
   "benefited_product_list": {},
-  "flags": {},
+  "flags": {
+    "apply_explicit": false
+  },
   "is_notification_enabled": true,
   "is_applied_to_pay_ids": true,
-  "customer_pay_ref": {},
-  "created_by": "string"
+  "customer_pay_ref": [220512063, 220511959, 220511991, 220511992],
+  "created_by": "admin"
 }
 ```
 
@@ -61,28 +65,44 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 1,
-    "discount_name": "asdga",
-    "discount_code": "asdga",
-    "discount_category": "asdga",
-    "discount_entity": "asdga",
+    "id": 53,
+    "discount_name": "10% off on topad & bumpup combo",
+    "discount_code": "TOPAD10COMBO",
+    "discount_category": "PRODUCT_BASED",
+    "discount_entity": "ADVERTISEMENT",
     "entity_attributes": {},
     "value_type": 1,
-    "value": 20.30,
-    "minimum_eligibility_amount": 32.20,
-    "maximum_eligibility_amount": 123.20,
-    "valid_from": "2023-06-01 00:00:00",
-    "valid_to": "2023-08-31 23:59:59",
-    "purchasing_criteria": {},
+    "value": 0.00,
+    "minimum_eligibility_amount": 0.00,
+    "maximum_eligibility_amount": 0.00,
+    "valid_from": "2025-07-27 00:00:00",
+    "valid_to": "2025-08-31 23:59:59",
+    "purchasing_criteria": {
+        "top_ad": [
+            3
+        ],
+        "bump_up": [
+            3,
+            7,
+            15
+        ]
+    },
     "benefited_product_list": {},
-    "flags": {},
+    "flags": {
+        "apply_explicit": false
+    },
     "is_active": true,
     "is_notification_enabled": true,
     "is_applied_to_pay_ids": true,
-    "customer_pay_ref": {},
-    "created_at": "2025-07-07 09:28:06",
-    "updated_at": "2025-07-07 09:28:06",
-    "created_by": "string"
+    "customer_pay_ref": [
+        220512063,
+        220511959,
+        220511991,
+        220511992
+    ],
+    "created_at": "2025-07-22 13:17:10",
+    "updated_at": "2025-07-22 13:17:10",
+    "created_by": "admin"
 }
 ```
 
@@ -99,28 +119,44 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 1,
-    "discount_name": "asdga",
-    "discount_code": "asdga",
-    "discount_category": "asdga",
-    "discount_entity": "asdga",
+    "id": 53,
+    "discount_name": "10% off on topad & bumpup combo",
+    "discount_code": "TOPAD10COMBO",
+    "discount_category": "PRODUCT_BASED",
+    "discount_entity": "ADVERTISEMENT",
     "entity_attributes": {},
     "value_type": 1,
-    "value": 20.30,
-    "minimum_eligibility_amount": 32.20,
-    "maximum_eligibility_amount": 123.20,
-    "valid_from": "2023-06-01 00:00:00",
-    "valid_to": "2023-08-31 23:59:59",
-    "purchasing_criteria": {},
+    "value": 0.00,
+    "minimum_eligibility_amount": 0.00,
+    "maximum_eligibility_amount": 0.00,
+    "valid_from": "2025-07-27 00:00:00",
+    "valid_to": "2025-08-31 23:59:59",
+    "purchasing_criteria": {
+        "top_ad": [
+            3
+        ],
+        "bump_up": [
+            3,
+            7,
+            15
+        ]
+    },
     "benefited_product_list": {},
-    "flags": {},
+    "flags": {
+        "apply_explicit": false
+    },
     "is_active": true,
     "is_notification_enabled": true,
     "is_applied_to_pay_ids": true,
-    "customer_pay_ref": {},
-    "created_at": "2025-07-07 09:28:06",
-    "updated_at": "2025-07-07 09:28:06",
-    "created_by": "string"
+    "customer_pay_ref": [
+        220512063,
+        220511959,
+        220511991,
+        220511992
+    ],
+    "created_at": "2025-07-22 13:17:10",
+    "updated_at": "2025-07-22 13:17:10",
+    "created_by": "admin"
 }
 ```
 
@@ -140,60 +176,80 @@ The following fields use numeric values to represent specific options:
 {
     "content": [
         {
-            "id": 1,
-            "discount_name": "asdga",
-            "discount_code": "asdga",
-            "discount_category": "asdga",
-            "discount_entity": "asdga",
+            "id": 53,
+            "discount_name": "10% off on topad & bumpup combo",
+            "discount_code": "TOPAD10COMBO",
+            "discount_category": "PRODUCT_BASED",
+            "discount_entity": "ADVERTISEMENT",
             "entity_attributes": {},
             "value_type": 1,
-            "value": 20.30,
-            "minimum_eligibility_amount": 32.20,
-            "maximum_eligibility_amount": 123.20,
-            "valid_from": "2023-06-01 00:00:00",
-            "valid_to": "2023-08-31 23:59:59",
-            "purchasing_criteria": {},
+            "value": 0.00,
+            "minimum_eligibility_amount": 0.00,
+            "maximum_eligibility_amount": 0.00,
+            "valid_from": "2025-07-27 00:00:00",
+            "valid_to": "2025-08-31 23:59:59",
+            "purchasing_criteria": {
+                "top_ad": [
+                    3
+                ],
+                "bump_up": [
+                    3,
+                    7,
+                    15
+                ]
+            },
             "benefited_product_list": {},
-            "flags": {},
+            "flags": {
+                "apply_explicit": false
+            },
             "is_active": true,
             "is_notification_enabled": true,
             "is_applied_to_pay_ids": true,
-            "customer_pay_ref": {},
-            "created_at": "2025-07-07 09:28:06",
-            "updated_at": "2025-07-07 09:28:06",
-            "created_by": "string"
+            "created_at": "2025-07-22 13:17:10",
+            "updated_at": "2025-07-22 13:17:10",
+            "created_by": "admin"
         },
         {
-            "id": 2,
-            "discount_name": "asdga",
-            "discount_code": "asdga",
-            "discount_category": "asdga",
-            "discount_entity": "asdga",
+            "id": 52,
+            "discount_name": "10% off on topad & bumpup combo",
+            "discount_code": "TOPAD10COMBO",
+            "discount_category": "PRODUCT_BASED",
+            "discount_entity": "ADVERTISEMENT",
             "entity_attributes": {},
             "value_type": 1,
-            "value": 20.30,
-            "minimum_eligibility_amount": 32.20,
-            "maximum_eligibility_amount": 123.20,
-            "valid_from": "2023-06-01 00:00:00",
-            "valid_to": "2023-08-31 23:59:59",
-            "purchasing_criteria": {},
+            "value": 0.00,
+            "minimum_eligibility_amount": 0.00,
+            "maximum_eligibility_amount": 0.00,
+            "valid_from": "2025-07-27 00:00:00",
+            "valid_to": "2025-08-31 23:59:59",
+            "purchasing_criteria": {
+                "top_ad": [
+                    3
+                ],
+                "bump_up": [
+                    3,
+                    7,
+                    15
+                ]
+            },
             "benefited_product_list": {},
-            "flags": {},
+            "flags": {
+                "apply_explicit": false
+            },
             "is_active": true,
             "is_notification_enabled": true,
             "is_applied_to_pay_ids": true,
-            "customer_pay_ref": {},
-            "created_at": "2025-07-07 09:28:10",
-            "updated_at": "2025-07-07 09:28:10",
-            "created_by": "string"
+            "created_at": "2025-07-22 12:13:43",
+            "updated_at": "2025-07-22 12:13:43",
+            "created_by": "admin"
         }
     ],
     "page": 0,
-    "size": 50,
-    "totalElements": 2,
-    "totalPages": 1,
+    "size": 2,
+    "totalElements": 29,
+    "totalPages": 15,
     "first": true,
-    "last": true
+    "last": false
 }
 ```
 
@@ -210,28 +266,44 @@ The following fields use numeric values to represent specific options:
 
 ```json
 {
-    "id": 4,
-    "discount_name": "asdga",
-    "discount_code": "asdga",
-    "discount_category": "asdga",
-    "discount_entity": "asdga",
+    "id": 53,
+    "discount_name": "10% off on topad & bumpup combo",
+    "discount_code": "TOPAD10COMBO",
+    "discount_category": "PRODUCT_BASED",
+    "discount_entity": "ADVERTISEMENT",
     "entity_attributes": {},
     "value_type": 1,
-    "value": 20.30,
-    "minimum_eligibility_amount": 32.20,
-    "maximum_eligibility_amount": 123.20,
-    "valid_from": "2023-06-01 00:00:00",
-    "valid_to": "2023-08-31 23:59:59",
-    "purchasing_criteria": {},
+    "value": 0.00,
+    "minimum_eligibility_amount": 0.00,
+    "maximum_eligibility_amount": 0.00,
+    "valid_from": "2025-07-27 00:00:00",
+    "valid_to": "2025-08-31 23:59:59",
+    "purchasing_criteria": {
+        "top_ad": [
+            3
+        ],
+        "bump_up": [
+            3,
+            7,
+            15
+        ]
+    },
     "benefited_product_list": {},
-    "flags": {},
+    "flags": {
+        "apply_explicit": false
+    },
     "is_active": false,
     "is_notification_enabled": true,
     "is_applied_to_pay_ids": true,
-    "customer_pay_ref": {},
-    "created_at": "2025-07-07 09:28:13",
-    "updated_at": "2025-07-07 09:28:13",
-    "created_by": "string"
+    "customer_pay_ref": [
+        220512063,
+        220511959,
+        220511991,
+        220511992
+    ],
+    "created_at": "2025-07-22 13:17:10",
+    "updated_at": "2025-07-22 13:17:10",
+    "created_by": "admin"
 }
 ```
 
