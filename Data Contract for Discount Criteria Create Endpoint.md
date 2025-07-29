@@ -1,4 +1,4 @@
-# Discount Criteria Create Endpoint
+# Discount Criteria Create Endpoint Data Contract
 
 This document describes the data contract for creating discount criteria in the Discount Manager API.
 
@@ -19,7 +19,7 @@ The request body should be a JSON object with the following fields:
 | `discount_code` | String | No | Code for the discount criteria | Must be unique if provided. |
 | `discount_category` | String | Yes | Category of the discount | Must not be null. If "PRODUCT_BASED", purchasing_criteria is required. |
 | `discount_entity` | String | Yes | Entity the discount applies to | Must not be null. |
-| `entity_attributes` | JSON Object | Yes | Attributes of the entity | Must be a valid JSON object. |
+| `entity_attributes` | JSON Object | No | Attributes of the entity | Must be a valid JSON object. |
 | `value_type` | Integer | Yes | Type of value (0 for fixed amount, 1 for percentage) | Must not be null. |
 | `value` | Decimal | Yes | Value of the discount | Must be positive. If value_type is 1 (percentage), cannot exceed 100. |
 | `minimum_eligibility_amount` | Decimal | No | Minimum amount to be eligible for the discount | Must be positive or zero if provided. |
@@ -85,42 +85,24 @@ The request body should be a JSON object with the following fields:
 
 ```json
 {
-  "discount_name": "Summer Sale 2025",
-  "discount_code": "SUMMER25",
+  "discount_name": "10% off on bumpup combo",
+  "discount_code": "TOPAD10COssMBO",
   "discount_category": "PRODUCT_BASED",
-  "discount_entity": "PRODUCT",
-  "entity_attributes": {
-    "category": "electronics",
-    "subcategory": "smartphones"
-  },
-  "value_type": 1,
-  "value": 15.00,
-  "minimum_eligibility_amount": 5000.00,
-  "maximum_eligibility_amount": 50000.00,
-  "valid_from": "2025-07-01 00:00:00",
+  "discount_entity": "ADVERTISEMENT",
+  "entity_attributes": null,
+  "value_type": 2,
+  "value": 1,
+  "minimum_eligibility_amount": 0.00,
+  "maximum_eligibility_amount": 0.00,
+  "valid_from": "2025-07-27 00:00:00",
   "valid_to": "2025-08-31 23:59:59",
-  "purchasing_criteria": {
-    "min_quantity": 1,
-    "product_ids": [1001, 1002, 1003]
-  },
-  "benefited_product_list": {
-    "product_ids": [1001, 1002, 1003, 1004, 1005]
-  },
-  "flags": {
-    "is_combinable": false,
-    "is_featured": true
-  },
-  "available_platforms": {
-    "web": true,
-    "mobile": true,
-    "pos": false
-  },
+  "purchasing_criteria": {"top_ad": [3, 7, 15], "bump_up": [7]},
+  "benefited_product_list": {},
+  "flags": null,
+  "available_platforms": ["WEB", "MOBILE", "POS"],
   "is_notification_enabled": true,
-  "customer_pay_ref": [
-    {"id": "CP001", "type": "REGULAR"},
-    {"id": "CP002", "type": "PREMIUM"}
-  ],
-  "created_by": "admin@example.com"
+  "customer_pay_ref": [220512063, 220511959, 220511991, 220511992],
+  "created_by": "admin"
 }
 ```
 
@@ -128,51 +110,45 @@ The request body should be a JSON object with the following fields:
 
 ```json
 {
-  "id": 123,
-  "discount_name": "Summer Sale 2025",
-  "discount_code": "SUMMER25",
-  "discount_category": "PRODUCT_BASED",
-  "discount_entity": "PRODUCT",
-  "entity_attributes": {
-    "category": "electronics",
-    "subcategory": "smartphones"
-  },
-  "value_type": 1,
-  "value": 15.00,
-  "minimum_eligibility_amount": 5000.00,
-  "maximum_eligibility_amount": 50000.00,
-  "valid_from": "2025-07-01 00:00:00",
-  "valid_to": "2025-08-31 23:59:59",
-  "purchasing_criteria": {
-    "min_quantity": 1,
-    "product_ids": [1001, 1002, 1003]
-  },
-  "benefited_product_list": {
-    "product_ids": [1001, 1002, 1003, 1004, 1005]
-  },
-  "flags": {
-    "is_combinable": false,
-    "is_featured": true
-  },
-  "available_platforms": {
-    "web": true,
-    "mobile": true,
-    "pos": false
-  },
-  "is_active": true,
-  "is_notification_enabled": true,
-  "customer_pay_ref": {
-    "initial": [
-      {"id": "CP001", "type": "REGULAR"},
-      {"id": "CP002", "type": "PREMIUM"}
+    "id": 142,
+    "discount_name": "10% off on bumpup combo",
+    "discount_code": "TOPAD10COssMBO",
+    "discount_category": "PRODUCT_BASED",
+    "discount_entity": "ADVERTISEMENT",
+    "entity_attributes": null,
+    "value_type": 2,
+    "value": 1,
+    "minimum_eligibility_amount": 0.00,
+    "maximum_eligibility_amount": 0.00,
+    "valid_from": "2025-07-27 00:00:00",
+    "valid_to": "2025-08-31 23:59:59",
+    "purchasing_criteria": {
+        "top_ad": [
+            3,
+            7,
+            15
+        ],
+        "bump_up": [
+            7
+        ]
+    },
+    "benefited_product_list": {},
+    "flags": null,
+    "available_platforms": [
+        "WEB",
+        "MOBILE",
+        "POS"
     ],
-    "applicable": [
-      {"id": "CP001", "type": "REGULAR"},
-      {"id": "CP002", "type": "PREMIUM"}
-    ]
-  },
-  "created_at": "2025-07-29 08:34:45",
-  "updated_at": "2025-07-29 08:34:45",
-  "created_by": "admin@example.com"
+    "is_active": true,
+    "is_notification_enabled": true,
+    "customer_pay_ref": [
+        220512063,
+        220511959,
+        220511991,
+        220511992
+    ],
+    "created_at": "2025-07-29 09:13:51",
+    "updated_at": "2025-07-29 09:13:51",
+    "created_by": "admin"
 }
 ```
